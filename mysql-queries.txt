@@ -1,0 +1,25 @@
+CREATE VIEW view_name AS SELECT column1, column2, .., columnN FROM table_name WHERE condition;
+
+CREATE TABLE IF NOT EXISTS tasks (
+    task_id INT AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    start_date DATE,
+    due_date DATE,
+    priority TINYINT NOT NULL DEFAULT 3,
+    description TEXT,
+    PRIMARY KEY (task_id)
+);
+
+INSERT INTO tasks(title, priority) VALUES
+	('My first task', 1),
+	('It is the second task', 2),
+	('This is the third task of the week', 3),
+	('My fourth task', 4),
+	('It is my fifth task', 5),
+	('This is the sixth task of the week', 6),
+	('My seventh task', 7),
+	('It is the eighth task', 8),
+	('This is the ninth task of the week', 9),
+	('My tenth task', 10);
+
+SELECT * FROM tasks;

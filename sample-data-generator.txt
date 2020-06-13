@@ -1,0 +1,9 @@
+composer require fzaninotto/faker --dev
+
+php artisan make:factory RouterFactory --model=Router
+
+php artisan make:seeder RouterTableSeeder
+
+composer dump-autoload
+
+php artisan db:seed --class=RouterTableSeeder
